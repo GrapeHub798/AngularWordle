@@ -1,0 +1,7 @@
+<div class="col">
+  <app-attempt-remaining [isDisabled]="isDisabled" [attemptsRemaining]="calculateRemainingAttempts()"></app-attempt-remaining>
+  <app-input-field [isDisabled]="isDisabled" (attemptSubmission)="onAttemptSubmission($event)"></app-input-field>
+  <div *ngFor="let attempt of attempts;" class="attempt">
+    <app-tile *ngFor="let letter of attempt;" [letter]="letter.letter" [state]="letter.state"></app-tile>
+  </div>
+</div>

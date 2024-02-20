@@ -1,0 +1,25 @@
+.tile {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border: 1px solid #000;
+}
+
+.correct {
+  background-color: green;
+}
+
+.present {
+  background-color: yellow;
+}
+
+.absent {
+  background-color: gray;
+}
+
+.default {
+  background-color: white;
+}

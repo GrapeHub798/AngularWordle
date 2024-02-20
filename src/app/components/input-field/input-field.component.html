@@ -1,0 +1,9 @@
+<div *ngIf="isDisabled" class="input-container">
+  Game Over!
+</div>
+<div *ngIf="!isDisabled" class="input-container" tabindex="0" (keydown)="handleKeyDownEvent($event)">
+  <div *ngFor="let letter of currentAttempt.split(''); let i = index" class="input-letter">
+    {{letter}}
+  </div>
+  <div *ngFor="let empty of [].constructor(5 - currentAttempt.length); let i = index" class="input-letter empty"></div>
+</div>
